@@ -1,0 +1,18 @@
+---
+title: "Untitled"
+author: "Russ"
+date: "2021/11/8"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r satu}
+library(knitr)
+kable(colSums(oct_feedback2[,3:21])/41)
+
+
+
+```
