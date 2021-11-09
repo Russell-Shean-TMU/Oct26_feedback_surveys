@@ -16,3 +16,11 @@ kable(colSums(oct_feedback2[,3:21])/41)
 
 
 ```
+
+```{r dua}
+library(knitr)
+kable(wrkshp_feedback %>% select(lecture_interesting:attend_next_event) %>% colSums()/nrow(wrkshp_feedback))
+
+
+
+```

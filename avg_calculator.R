@@ -2,12 +2,14 @@
 ### make factors
 #####################################################################################
 
+library(dplyr)
+
 #step 1
 #convert all the characters into factors
 # this turns all character vectors into either ordered or unordered factors
 #source: https://gist.github.com/ramhiser/93fe37be439c480dc26c4bed8aab03dd 
 oct_feedback <- oct_feedback %>% mutate(across(where(is.character),factor))
-
+wrkshp_feedback <- wrkshp_feedback %>% mutate(across(where(is.character),factor))
 
 
 
@@ -55,6 +57,23 @@ colSums(oct_feedback2[,3:21])/41
 
 mean(colSums(oct_feedback2[,3:21])/41)
 
+#repeat for november survey
+
+wrkshp_feedback <- wrkshp_feedback%>%
+  mutate(
+    across(lecture_interesting:attend_next_event,
+           f1))
+
+wrkshp_feedback <- as.data.frame(wrkshp_feedback)
 
 
+wrkshp_feedback <- wrkshp_feedback%>%
+  mutate(
+    across(lecture_interesting:attend_next_event,
+           as.numeric))
+
+
+wrkshp_feedback %>% select(lecture_interesting:attend_next_event) %>% colSums()/nrow(wrkshp_feedback)
+
+mean(wrkshp_feedback %>% select(lecture_interesting:attend_next_event) %>% colSums()/nrow(wrkshp_feedback))
 

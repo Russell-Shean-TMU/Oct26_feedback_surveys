@@ -259,6 +259,118 @@ kable(colSums(oct_feedback2[,3:21])/41)</code></pre>
 </tr>
 </tbody>
 </table>
+<pre class="r"><code>library(knitr)
+kable(wrkshp_feedback %&gt;% select(lecture_interesting:attend_next_event) %&gt;% colSums()/nrow(wrkshp_feedback))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">lecture_interesting</td>
+<td align="right">4.266667</td>
+</tr>
+<tr class="even">
+<td align="left">topic_helps_career</td>
+<td align="right">4.333333</td>
+</tr>
+<tr class="odd">
+<td align="left">topic_important</td>
+<td align="right">4.333333</td>
+</tr>
+<tr class="even">
+<td align="left">spkr_know_topic</td>
+<td align="right">4.333333</td>
+</tr>
+<tr class="odd">
+<td align="left">topic_deserves_attention</td>
+<td align="right">4.200000</td>
+</tr>
+<tr class="even">
+<td align="left">registration_easy</td>
+<td align="right">4.333333</td>
+</tr>
+<tr class="odd">
+<td align="left">mixed_format_ok</td>
+<td align="right">4.000000</td>
+</tr>
+<tr class="even">
+<td align="left">in_person_sound_ok</td>
+<td align="right">4.200000</td>
+</tr>
+<tr class="odd">
+<td align="left">online_sound_ok</td>
+<td align="right">4.133333</td>
+</tr>
+<tr class="even">
+<td align="left">in_person_visual_ok</td>
+<td align="right">4.333333</td>
+</tr>
+<tr class="odd">
+<td align="left">online_visual_ok</td>
+<td align="right">3.866667</td>
+</tr>
+<tr class="even">
+<td align="left">more_online_speakers</td>
+<td align="right">3.333333</td>
+</tr>
+<tr class="odd">
+<td align="left">more_in_person_speakers</td>
+<td align="right">4.200000</td>
+</tr>
+<tr class="even">
+<td align="left">group_discussions_interesting</td>
+<td align="right">4.200000</td>
+</tr>
+<tr class="odd">
+<td align="left">group_discussions_help_career</td>
+<td align="right">4.133333</td>
+</tr>
+<tr class="even">
+<td align="left">group_discussion_topic_important</td>
+<td align="right">4.000000</td>
+</tr>
+<tr class="odd">
+<td align="left">mentor_know_topic</td>
+<td align="right">4.266667</td>
+</tr>
+<tr class="even">
+<td align="left">mentor_know_hp</td>
+<td align="right">4.200000</td>
+</tr>
+<tr class="odd">
+<td align="left">timing_ok</td>
+<td align="right">4.066667</td>
+</tr>
+<tr class="even">
+<td align="left">hp_knowledge_increased</td>
+<td align="right">4.200000</td>
+</tr>
+<tr class="odd">
+<td align="left">core_comp_knowledge_increased</td>
+<td align="right">4.133333</td>
+</tr>
+<tr class="even">
+<td align="left">cchp_awareness_increased</td>
+<td align="right">4.200000</td>
+</tr>
+<tr class="odd">
+<td align="left">connections_made</td>
+<td align="right">4.266667</td>
+</tr>
+<tr class="even">
+<td align="left">twn_int_lots_of_interactions</td>
+<td align="right">4.000000</td>
+</tr>
+<tr class="odd">
+<td align="left">attend_next_event</td>
+<td align="right">4.400000</td>
+</tr>
+</tbody>
+</table>
 
 
 
